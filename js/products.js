@@ -9,8 +9,8 @@ const ASTA_PRODUCTS = [
     categoryLabel: 'Kashmiri Honey',
     tagline: 'Raw, naturally rich Kashmiri honey harvested from the pristine valleys of Kashmir.',
     description: 'Harvested in the pristine valleys of Kashmir, our honey is collected in small batches and left just as nature intended. Raw, unprocessed, and naturally rich, every jar reflects the purity, tradition, and beauty of the Himalayas.',
-    image: 'images/IMG-20260812-WA0012.jpg',
-    images: ['images/IMG-20260812-WA0012.jpg'],
+    image: 'images/asta-honey-jar.jpg',
+    images: ['images/asta-honey-jar.jpg'],
     variants: [
       { weight: '300g', sku: 'AST-H-001' },
       { weight: '500g', sku: 'AST-H-002' },
