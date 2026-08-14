@@ -33,8 +33,8 @@ const ASTA_PRODUCTS = [
     categoryLabel: 'Kashmiri Saffron',
     tagline: 'Precious threads from the valleys of Kashmir.',
     description: 'Hand-picked Kashmiri saffron (Crocus sativus) known for its deep aroma, vibrant colour and exceptional quality. Carefully graded and packed to preserve its pure essence.',
-    image: 'images/kahwa.jpg',
-    images: ['images/kahwa.jpg'],
+    image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80'],
     variants: [
       { weight: '1g', sku: 'AST-S-001' },
       { weight: '2g', sku: 'AST-S-002' },
