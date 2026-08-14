@@ -214,7 +214,7 @@ function getProductById(id) { return ASTA_PRODUCTS.find(p => p.id === id); }
 function getProductsByCategory(cat) { if (!cat || cat === 'all') return ASTA_PRODUCTS; return ASTA_PRODUCTS.filter(p => p.category === cat); }
 function getBestsellers() { return ASTA_PRODUCTS.filter(p => p.bestseller); }
 
-const WA_NUMBER = '916096548199';
+const WA_NUMBER = '916006548199';
 function waProductLink(productName, weight) {
   const msg = weight
     ? `Hello ASTA, I'm interested in ${productName} (${weight}). Please share the price and availability.`
