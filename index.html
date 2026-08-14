@@ -20,7 +20,6 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#shop">Shop</a></li>
         <li><a href="#honey">Honey</a></li>
-        <li><a href="#saffron">Saffron</a></li>
         <li><a href="#kahwa">Kahwa</a></li>
         <li><a href="#dryfruits">Dry Fruits</a></li>
         <li><a href="#story">Our Story</a></li>
@@ -41,7 +40,6 @@
       <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
       <li><a href="#shop" onclick="closeMobileMenu()">Shop</a></li>
       <li><a href="#honey" onclick="closeMobileMenu()">Honey</a></li>
-      <li><a href="#saffron" onclick="closeMobileMenu()">Saffron</a></li>
       <li><a href="#kahwa" onclick="closeMobileMenu()">Kahwa</a></li>
       <li><a href="#dryfruits" onclick="closeMobileMenu()">Dry Fruits</a></li>
       <li><a href="#story" onclick="closeMobileMenu()">Our Story</a></li>
@@ -51,7 +49,7 @@
 
   <div class="search-overlay" id="search-overlay">
     <div class="search-box">
-      <input type="text" id="search-input" placeholder="Search honey, saffron, kahwa, dry fruits..." autocomplete="off">
+      <input type="text" id="search-input" placeholder="Search honey, kahwa, dry fruits..." autocomplete="off">
       <button class="search-close" onclick="closeSearch()">×</button>
     </div>
     <div class="search-results" id="search-results"></div>
@@ -64,7 +62,7 @@
     <div class="hero-content reveal">
       <div class="hero-badge">AUTHENTIC • PREMIUM • KASHMIRI</div>
       <h1>FROM KASHMIR,<br><span>WITH PURITY.</span></h1>
-      <p class="hero-sub">Pure honey, saffron, Kahwa & premium dry fruits, sourced from the valleys of Kashmir.</p>
+      <p class="hero-sub">Pure honey, Kahwa & premium dry fruits, sourced from the valleys of Kashmir.</p>
       <div class="hero-btns">
         <a href="#shop" class="btn btn-primary">Shop Collection</a>
         <a href="#story" class="btn btn-outline">Explore Our Story</a>
@@ -77,11 +75,10 @@
       <span class="section-label">Curated for You</span>
       <h2 class="section-title">The Kashmir Collection</h2>
       <div class="gold-divider"></div>
-      <p class="section-sub">Four pillars of purity from the Himalayas</p>
+      <p class="section-sub">Pure products from the Himalayas</p>
     </div>
     <div class="categories">
       <a href="#honey" class="category-card reveal"><img src="images/honey.jpg" alt="Honey"><div class="category-overlay"><div class="category-name">Honey</div><span class="category-link">Explore →</span></div></a>
-      <a href="#saffron" class="category-card reveal"><img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600" alt="Saffron"><div class="category-overlay"><div class="category-name">Saffron</div><span class="category-link">Explore →</span></div></a>
       <a href="#kahwa" class="category-card reveal"><img src="images/kahwa.jpg" alt="Kahwa"><div class="category-overlay"><div class="category-name">Kahwa</div><span class="category-link">Explore →</span></div></a>
       <a href="#dryfruits" class="category-card reveal"><img src="https://images.unsplash.com/photo-1772986799909-81bc27fd99ce?q=80&w=600" alt="Dry Fruits"><div class="category-overlay"><div class="category-name">Dry Fruits</div><span class="category-link">Explore →</span></div></a>
     </div>
@@ -111,27 +108,6 @@
           <div class="product-actions">
             <a href="https://wa.me/916006548199?text=Hello%20ASTA%2C%20I%27m%20interested%20in%20ASTA%20Pure%20Kashmiri%20White%20Honey.%20Please%20share%20the%20price%20and%20availability." target="_blank" rel="noopener" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">Get Price on WhatsApp</a>
             <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openProduct('honey-white')">View</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="saffron" style="background:var(--cream);max-width:100%">
-    <div style="max-width:1400px;margin:0 auto">
-      <div class="section-header reveal"><span class="section-label">Precious Threads</span><h2 class="section-title">Kashmiri Saffron</h2><div class="gold-divider"></div><p class="section-sub">Precious threads from the valleys of Kashmir.</p></div>
-      <div class="product-grid">
-        <div class="product-card" data-id="saffron-kashmiri" onclick="openProduct('saffron-kashmiri')">
-          <div class="product-image-wrap"><img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600" alt="Saffron"><div class="product-badges"><span class="badge badge-gold">Bestseller</span></div></div>
-          <div class="product-info">
-            <div class="product-category">Kashmiri Saffron</div>
-            <h3 class="product-name">ASTA Kashmiri Saffron</h3>
-            <div class="product-rating"><span class="stars">★★★★★</span> <span>(86)</span></div>
-            <p style="font-size:0.85rem;color:var(--text-muted);margin:0.4rem 0 0.8rem">Available in 1g · 2g · 5g · 10g</p>
-            <div class="product-actions">
-              <a href="https://wa.me/916006548199?text=Hello%20ASTA%2C%20I%27m%20interested%20in%20ASTA%20Kashmiri%20Saffron.%20Please%20share%20the%20price%20and%20availability." target="_blank" rel="noopener" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">Get Price on WhatsApp</a>
-              <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openProduct('saffron-kashmiri')">View</button>
-            </div>
           </div>
         </div>
       </div>
@@ -169,7 +145,6 @@
     <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2.5rem" class="reveal">
       <button class="btn btn-outline btn-sm filter-btn active" data-cat="all" onclick="filterShop('all')">All</button>
       <button class="btn btn-outline btn-sm filter-btn" data-cat="honey" onclick="filterShop('honey')">Honey</button>
-      <button class="btn btn-outline btn-sm filter-btn" data-cat="saffron" onclick="filterShop('saffron')">Saffron</button>
       <button class="btn btn-outline btn-sm filter-btn" data-cat="kahwa" onclick="filterShop('kahwa')">Kahwa</button>
       <button class="btn btn-outline btn-sm filter-btn" data-cat="dryfruits" onclick="filterShop('dryfruits')">Dry Fruits</button>
     </div>
@@ -183,7 +158,7 @@
       <h2>Born in Kashmir.<br>Crafted with Purity.</h2>
       <p>ASTA was created with a simple belief — that the finest products should be presented with the same care and respect with which they are sourced.</p>
       <p>Rooted in the rich heritage of Kashmir, ASTA brings together carefully selected natural products and presents them through a modern, refined lens.</p>
-      <p>Our journey begins with the purity of Kashmir — from our distinctive Kashmiri White Honey to thoughtfully curated dry fruits, saffron and other treasures from the region.</p>
+      <p>Our journey begins with the purity of Kashmir — from our distinctive Kashmiri White Honey to thoughtfully curated dry fruits and other treasures from the region.</p>
       <p>We believe luxury doesn't need to be loud. It lives in quality, authenticity, simplicity and attention to detail.</p>
       <p style="font-family:var(--font-serif);font-size:1.4rem;margin-top:2rem;color:var(--light-gold)">ASTA — Purely from Kashmir.</p>
       <a href="#shop" class="btn btn-outline" style="margin-top:2rem;border-color:rgba(255,255,255,0.5);color:white">Discover Our Collection →</a>
@@ -240,7 +215,7 @@
           <p><a href="https://instagram.com/houseofasta" target="_blank" rel="noopener">Instagram: @houseofasta</a></p>
         </div>
       </div>
-      <div><h5>Shop</h5><ul class="footer-links"><li><a href="#shop">All Products</a></li><li><a href="#honey">Honey</a></li><li><a href="#saffron">Saffron</a></li><li><a href="#kahwa">Kahwa</a></li><li><a href="#dryfruits">Dry Fruits</a></li></ul></div>
+      <div><h5>Shop</h5><ul class="footer-links"><li><a href="#shop">All Products</a></li><li><a href="#honey">Honey</a></li><li><a href="#kahwa">Kahwa</a></li><li><a href="#dryfruits">Dry Fruits</a></li></ul></div>
       <div><h5>Company</h5><ul class="footer-links"><li><a href="#story">Our Story</a></li><li><a href="#contact">Contact</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Return Policy</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li></ul></div>
       <div class="newsletter"><h5>Stay Connected</h5><p>Receive stories, new collections & offers from Kashmir.</p><form class="newsletter-form"><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form></div>
     </div>
