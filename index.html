@@ -30,6 +30,10 @@
       <div class="nav-actions">
         <button class="nav-icon" onclick="openSearch()" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
         <button class="nav-icon" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="wishlist-count">0</span></button>
+        <a href="https://instagram.com/houseofasta" target="_blank" rel="noopener" class="btn-instagram-follow" aria-label="Follow ASTA on Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>Follow</span>
+        </a>
         <button class="hamburger" onclick="openMobileMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -47,6 +51,12 @@
       <li><a href="#dryfruits" onclick="closeMobileMenu()">Dry Fruits</a></li>
       <li><a href="#story" onclick="closeMobileMenu()">Our Story</a></li>
       <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+      <li style="margin-top:1.5rem">
+        <a href="https://instagram.com/houseofasta" target="_blank" rel="noopener" class="btn-instagram-follow" style="display:inline-flex" onclick="closeMobileMenu()">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>Follow @houseofasta</span>
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -121,7 +131,6 @@
           <div class="product-rating"><span class="stars">★★★★★</span> <span>(128)</span></div>
           <p style="font-size:0.85rem;color:var(--text-muted);margin:0.4rem 0 0.5rem">Available in 300g · 500g · 1kg</p>
           <p class="custom-qty-note" style="font-size:0.8rem;color:var(--gold);margin:0 0 0.8rem;font-style:italic">Custom Quantity Available — Tell us the quantity you need, we'll prepare it for you.</p>
-          <div class="highlights" style="margin-bottom:1rem"><span class="highlight-item">Raw & Unprocessed</span><span class="highlight-item">Single-Origin</span></div>
           <div class="product-actions">
             <a href="https://wa.me/916006548199?text=Hello%20ASTA%2C%20I%27m%20interested%20in%20ASTA%20Pure%20Kashmiri%20White%20Honey.%20Please%20share%20the%20price%20and%20availability." target="_blank" rel="noopener" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">Get Price on WhatsApp</a>
             <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openProduct('honey-white')">View</button>
@@ -155,12 +164,12 @@
         <div class="gold-divider" style="margin:0.8rem auto 1.8rem"></div>
         <ol style="list-style:none;padding:0;margin:0">
           <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">1</span><strong style="display:block;margin-bottom:0.25rem">Warm Water Test</strong><span style="color:var(--text-muted);font-size:0.95rem">Place a few saffron threads in warm water.</span></li>
-          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">2</span><strong style="display:block;margin-bottom:0.25rem">Watch the Colour</strong><span style="color:var(--text-muted);font-size:0.95rem">Pure saffron gradually releases a natural golden-yellow colour. The colour should not appear unnaturally intense immediately.</span></li>
-          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">3</span><strong style="display:block;margin-bottom:0.25rem">Check the Threads</strong><span style="color:var(--text-muted);font-size:0.95rem">Genuine saffron threads stay intact and retain their natural structure after soaking.</span></li>
-          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">4</span><strong style="display:block;margin-bottom:0.25rem">Check the Colour of the Threads</strong><span style="color:var(--text-muted);font-size:0.95rem">If the threads quickly lose their natural red colour and turn unusually pale or white, it can be a warning sign of impurity.</span></li>
-          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">5</span><strong style="display:block;margin-bottom:0.25rem">Check the Aroma</strong><span style="color:var(--text-muted);font-size:0.95rem">Pure saffron has a distinctive natural floral, earthy aroma. It should not smell strongly artificial or chemical.</span></li>
+          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">2</span><strong style="display:block;margin-bottom:0.25rem">Watch the Colour</strong><span style="color:var(--text-muted);font-size:0.95rem">Pure saffron gradually releases a natural golden-yellow colour.</span></li>
+          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">3</span><strong style="display:block;margin-bottom:0.25rem">Check the Threads</strong><span style="color:var(--text-muted);font-size:0.95rem">Genuine saffron threads stay intact after soaking.</span></li>
+          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">4</span><strong style="display:block;margin-bottom:0.25rem">Check Thread Colour</strong><span style="color:var(--text-muted);font-size:0.95rem">If threads quickly turn pale or white, it can be a sign of impurity.</span></li>
+          <li style="margin-bottom:1.4rem;padding-left:2.8rem;position:relative"><span style="position:absolute;left:0;top:0;width:2rem;height:2rem;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:600">5</span><strong style="display:block;margin-bottom:0.25rem">Check the Aroma</strong><span style="color:var(--text-muted);font-size:0.95rem">Pure saffron has a natural floral, earthy aroma.</span></li>
         </ol>
-        <p style="margin-top:1.8rem;padding:1rem 1.2rem;background:rgba(184,149,94,0.08);border-left:3px solid var(--gold);font-size:0.95rem;color:var(--charcoal)"><strong>Tip:</strong> Genuine saffron releases its colour gradually while the threads remain intact.</p>
+        <p style="margin-top:1.8rem;padding:1rem 1.2rem;background:rgba(184,149,94,0.08);border-left:3px solid var(--gold);font-size:0.95rem"><strong>Tip:</strong> Genuine saffron releases its colour gradually while the threads remain intact.</p>
       </div>
     </div>
   </section>
@@ -211,8 +220,6 @@
       <h2>Born in Kashmir.<br>Crafted with Purity.</h2>
       <p>ASTA was created with a simple belief — that the finest products should be presented with the same care and respect with which they are sourced.</p>
       <p>Rooted in the rich heritage of Kashmir, ASTA brings together carefully selected natural products and presents them through a modern, refined lens.</p>
-      <p>Our journey begins with the purity of Kashmir — from our distinctive Kashmiri White Honey to thoughtfully curated dry fruits, saffron and other treasures from the region.</p>
-      <p>We believe luxury doesn't need to be loud. It lives in quality, authenticity, simplicity and attention to detail.</p>
       <p style="font-family:var(--font-serif);font-size:1.4rem;margin-top:2rem;color:var(--light-gold)">ASTA — Purely from Kashmir.</p>
       <a href="#shop" class="btn btn-outline" style="margin-top:2rem;border-color:rgba(255,255,255,0.5);color:white">Discover Our Collection →</a>
     </div>
@@ -232,7 +239,7 @@
 
   <section class="section" id="contact" style="background:var(--cream);max-width:100%">
     <div style="max-width:900px;margin:0 auto">
-      <div class="section-header reveal"><span class="section-label">We're Here</span><h2 class="section-title">Let's Connect.</h2><div class="gold-divider"></div><p class="section-sub">Have a question about our products or ASTA? We'd love to hear from you.</p></div>
+      <div class="section-header reveal"><span class="section-label">We're Here</span><h2 class="section-title">Let's Connect.</h2><div class="gold-divider"></div></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem" class="reveal contact-grid">
         <div>
           <h4 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:1.5rem">Contact Information</h4>
@@ -269,7 +276,7 @@
         </div>
       </div>
       <div><h5>Shop</h5><ul class="footer-links"><li><a href="#shop">All Products</a></li><li><a href="#honey">Honey</a></li><li><a href="#saffron">Saffron</a></li><li><a href="#kahwa">Kahwa</a></li><li><a href="#dryfruits">Dry Fruits</a></li></ul></div>
-      <div><h5>Company</h5><ul class="footer-links"><li><a href="#story">Our Story</a></li><li><a href="#contact">Contact</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Return Policy</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li></ul></div>
+      <div><h5>Company</h5><ul class="footer-links"><li><a href="#story">Our Story</a></li><li><a href="#contact">Contact</a></li></ul></div>
       <div class="newsletter"><h5>Stay Connected</h5><p>Receive stories, new collections & offers from Kashmir.</p><form class="newsletter-form"><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form></div>
     </div>
     <div class="footer-bottom"><span>© 2026 ASTA. All rights reserved.</span><div class="social-links"><a href="https://instagram.com/houseofasta" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/916006548199" target="_blank" rel="noopener">WhatsApp</a></div></div>
