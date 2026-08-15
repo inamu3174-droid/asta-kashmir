@@ -77,9 +77,65 @@
     `;
   }
 
-  function renderBestsellers() {
-    const el = document.getElementById('bestsellers-carousel');
-    if (el) el.innerHTML = getBestsellers().map(productCardHTML).join('');
+  function initCoverflow() {
+    const wrap = document.getElementById('coverflow-slides');
+    if (!wrap || typeof Swiper === 'undefined') return;
+
+    const featured = [
+      getProductById('honey-white'),
+      getProductById('saffron-kashmiri'),
+      getProductById('kahwa-mist'),
+      getProductById('walnuts'),
+      getProductById('almonds'),
+      getProductById('cashews'),
+      getProductById('gift-mix'),
+      getProductById('pistachios'),
+    ].filter(Boolean);
+
+    const slides = featured.length < 6 ? [...featured, ...featured] : featured;
+
+    wrap.innerHTML = slides.map(p => `
+      <div class="swiper-slide">
+        <a href="#${p.category === 'dryfruits' ? 'dryfruits' : p.category}" onclick="event.preventDefault(); openProduct('${p.id}')">
+          <div class="slide-img">
+            <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='images/honey.jpg'">
+          </div>
+          <div class="slide-info">
+            <div class="slide-cat">${p.categoryLabel || p.category}</div>
+            <div class="slide-name">${p.name}</div>
+          </div>
+        </a>
+      </div>
+    `).join('');
+
+    new Swiper('.asta-coverflow', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: true,
+      spaceBetween: 0,
+      coverflowEffect: {
+        rotate: 35,
+        stretch: 0,
+        depth: 120,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 2800,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: '.asta-coverflow .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.asta-coverflow .swiper-button-next',
+        prevEl: '.asta-coverflow .swiper-button-prev',
+      },
+    });
   }
 
   function openProduct(id) {
@@ -199,7 +255,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => document.querySelector('.page-loader')?.classList.add('hidden'), 800);
     updateWishlistUI();
-    renderBestsellers();
+    initCoverflow();
     initReveal();
     initNav();
     initContact();
