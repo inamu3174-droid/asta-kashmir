@@ -27,6 +27,37 @@ const ASTA_PRODUCTS = [
     newArrival: false
   },
   {
+    id: 'saffron-kashmiri',
+    name: 'ASTA Kashmiri Saffron',
+    category: 'saffron',
+    categoryLabel: 'Kashmiri Saffron',
+    tagline: 'Precious threads from the valleys of Kashmir.',
+    description: 'Hand-picked Kashmiri saffron (Crocus sativus) known for its deep aroma, vibrant colour and exceptional quality. Carefully graded and packed to preserve its pure essence.',
+    image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80'],
+    variants: [
+      { weight: '1g', sku: 'AST-S-001' },
+      { weight: '2g', sku: 'AST-S-002' },
+      { weight: '3g', sku: 'AST-S-003' },
+      { weight: '4g', sku: 'AST-S-004' },
+      { weight: '5g', sku: 'AST-S-005' },
+      { weight: '6g', sku: 'AST-S-006' },
+      { weight: '7g', sku: 'AST-S-007' },
+      { weight: '8g', sku: 'AST-S-008' },
+      { weight: '9g', sku: 'AST-S-009' },
+      { weight: '10g', sku: 'AST-S-010' }
+    ],
+    defaultVariant: 0,
+    highlights: ['Premium Grade', 'Hand-Picked', 'Intense Aroma', 'Vibrant Colour'],
+    ingredients: '100% Pure Kashmiri Saffron',
+    storage: 'Store in a cool, dry place away from light and moisture.',
+    bestBefore: '24 Months from PKD',
+    rating: 4.8,
+    reviews: 86,
+    bestseller: true,
+    newArrival: false
+  },
+  {
     id: 'kahwa-mist',
     name: 'ASTA Kashmiri Mist Saffron Kahwa',
     category: 'kahwa',
@@ -198,4 +229,7 @@ function waProductLink(productName, weight) {
 }
 function waGeneralLink() {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hello ASTA, I'm interested in your products. I would like to know more.")}`;
+}
+function waCustomQtyLink(productName) {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hello ASTA, I'm interested in " + productName + ". I need a custom quantity. Please share details.")}`;
 }
