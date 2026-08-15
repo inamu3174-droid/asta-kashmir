@@ -88,7 +88,7 @@ const ASTA_PRODUCTS = [
   },
   {
     id: 'walnuts',
-    name: 'Kashmiri Walnuts',
+    name: 'Finest Kashmiri Walnut Kernels',
     category: 'dryfruits',
     categoryLabel: 'Premium Dry Fruits',
     tagline: 'Crunchy, nutrient-rich walnuts from the orchards of Kashmir.',
