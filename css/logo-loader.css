@@ -1,1 +1,31 @@
-PLACEHOLDER_WILL_FAIL
+/* ASTA logo loader */
+.page-loader {
+  background: #0a2e0a !important;
+}
+.loader-logo {
+  width: min(300px, 70vw) !important;
+  min-height: 160px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: logoPulse 1.8s ease infinite !important;
+  background: url("images/asta-logo.jpg") center / contain no-repeat !important;
+  filter: drop-shadow(0 0 28px rgba(180, 230, 100, 0.3));
+}
+/* Fallback text if logo image not yet uploaded */
+.loader-logo::after {
+  content: "ASTA";
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 12vw, 5rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #c8e86c;
+  text-shadow: 0 0 30px rgba(200, 232, 108, 0.4);
+}
+.loader-logo img {
+  display: none !important;
+}
+@keyframes logoPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(1.03); }
+}
