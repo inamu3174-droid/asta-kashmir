@@ -1,0 +1,15 @@
+/* ASTA logo loader - embedded logo for intro screen */
+.page-loader { background: #0a2e0a !important; }
+.loader-logo {
+  width: min(280px, 55vw) !important;
+  aspect-ratio: 1 !important;
+  background: url("images/asta-logo.jpg") center / contain no-repeat !important;
+  animation: logoPulse 1.8s ease infinite !important;
+  filter: drop-shadow(0 0 24px rgba(180, 230, 100, 0.25));
+  font-size: 0 !important;
+}
+.loader-logo img { display: none !important; }
+@keyframes logoPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
