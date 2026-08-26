@@ -1,13 +1,29 @@
-/* ASTA logo loading intro */
-.page-loader { background: #c8e86c !important; }
+/* ASTA logo loading intro — lime brand background matching logo */
+.page-loader {
+  background: #c8e86c !important;
+}
+
 .loader-logo {
   width: min(280px, 68vw) !important;
   aspect-ratio: 1 !important;
-  background: url("images/asta-logo.jpg") center / contain no-repeat !important;
+  background: none !important;
   animation: logoPulse 1.8s ease infinite !important;
-  filter: drop-shadow(0 8px 28px rgba(10,46,10,0.12));
+  filter: drop-shadow(0 8px 28px rgba(10, 46, 10, 0.15));
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
-.loader-logo img { display: none !important; }
+
+.loader-logo img,
+.loader-logo-img {
+  display: block !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
 @keyframes logoPulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.92; transform: scale(1.03); }
