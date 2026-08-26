@@ -1,41 +1,14 @@
 /* ASTA logo loading intro */
-.page-loader {
-  background: #0a2e0a !important;
-}
+.page-loader { background: #c8e86c !important; }
 .loader-logo {
-  width: min(320px, 75vw) !important;
-  min-height: 180px;
-  display: flex !important;
-  flex-direction: column;
-  align-items: center !important;
-  justify-content: center !important;
+  width: min(280px, 68vw) !important;
+  aspect-ratio: 1 !important;
+  background: url("images/asta-logo.jpg") center / contain no-repeat !important;
   animation: logoPulse 1.8s ease infinite !important;
-  position: relative;
+  filter: drop-shadow(0 8px 28px rgba(10,46,10,0.12));
 }
-/* Logo image (upload images/asta-logo.jpg to enable) */
-.loader-logo img.loader-logo-img {
-  display: block !important;
-  width: min(280px, 65vw);
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 28px rgba(180, 230, 100, 0.35));
-}
-/* Brand text always shows under/as fallback */
-.loader-logo::after {
-  content: "ASTA";
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.8rem, 11vw, 4.5rem);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  color: #c8e86c;
-  text-shadow: 0 0 40px rgba(200, 232, 108, 0.45);
-  margin-top: 0.25rem;
-}
-/* When image loads successfully, hide the text fallback */
-.loader-logo:has(img[src]:not([src=""]))::after {
-  display: none;
-}
+.loader-logo img { display: none !important; }
 @keyframes logoPulse {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.025); }
+  50% { opacity: 0.92; transform: scale(1.03); }
 }
