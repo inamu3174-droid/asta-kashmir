@@ -1,6 +1,19 @@
 /* ASTA logo loading intro — lime brand background matching logo */
 .page-loader {
+  position: fixed !important;
+  inset: 0 !important;
   background: #c8e86c !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: opacity 0.6s ease, visibility 0.6s !important;
+}
+
+.page-loader.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .loader-logo {
