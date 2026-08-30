@@ -1,140 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASTA — From Kashmir, With Purity | Pure Kashmiri Honey, Saffron, Kahwa & Dry Fruits</title>
-  <meta name="description" content="ASTA brings authentic Himalayan honey, Kashmiri saffron, Kahwa and premium dry fruits from the valleys of Kashmir. Purely from Kashmir.">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/logo-loader.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTA — From Kashmir, Closer to You</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F8F5F0;--charcoal:#1A1A1A;--green:#1B4D3E;--gold:#B8976A;--muted:#5A5A5A;--border:rgba(185,151,106,.28)}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ivory);color:var(--charcoal);line-height:1.65}
+.page-loader{position:fixed;inset:0;background:#F5F0E8;z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .7s,visibility .7s}
+.page-loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-logo img{width:min(140px,40vw);height:auto;border-radius:10px;animation:pulse 1.9s ease infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.03);opacity:.92}}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,245,240,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;max-width:1100px;margin:0 auto}
+.nav img{height:42px;width:auto;border-radius:5px}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--charcoal);text-decoration:none}
+.nav-links a:hover{color:var(--gold)}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 1.5rem 4rem}
+.hero img{width:min(150px,38vw);height:auto;border-radius:10px;margin-bottom:1.2rem;box-shadow:0 8px 28px rgba(27,77,62,.1)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:500;font-style:italic;margin-bottom:1.1rem}
+.hero p{font-size:1.05rem;color:var(--muted);max-width:460px;margin:0 auto 2rem;line-height:1.7}
+.btn{display:inline-block;padding:1rem 2.1rem;background:var(--charcoal);color:#F8F5F0;font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.btn:hover{background:var(--green)}
+.section{padding:4.5rem 1.5rem;max-width:1000px;margin:0 auto;border-top:1px solid var(--border)}
+.product{display:grid;grid-template-columns:1fr 1.1fr;gap:2.5rem;align-items:center}
+.product.reverse{direction:rtl}.product.reverse>*{direction:ltr}
+.visual{background:#FFFEF9;border:1px solid var(--border);aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--green)}
+.product h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;margin-bottom:.6rem}
+.product p{color:var(--muted);margin-bottom:1rem;line-height:1.7}
+.tags span{display:inline-block;background:rgba(27,77,62,.08);color:var(--green);padding:.25rem .6rem;margin:.15rem .2rem .15rem 0;font-size:.78rem}
+.product a{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--green);text-decoration:none}
+.variants{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0}
+.variant{border:1px solid var(--border);padding:.35rem .7rem;font-size:.8rem}
+.auth{background:rgba(27,77,62,.05);border-left:3px solid var(--green);padding:.85rem 1rem;margin:1.1rem 0;font-size:.9rem;color:var(--muted)}
+.story{background:#0D0D0D;color:#E8E4DE;text-align:center;padding:4.5rem 1.5rem}
+.story h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;margin-bottom:1.2rem}
+.story .lead{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;color:#fff;margin-bottom:1.3rem}
+.story p{max-width:560px;margin:0 auto 1rem;line-height:1.8;opacity:.92}
+.story .close{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--gold);margin-top:1.5rem}
+.contact{text-align:center;padding:4.5rem 1.5rem}
+.contact h2{font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:1rem}
+.footer{background:#0D0D0D;color:#E8E4DE;text-align:center;padding:3rem 1.5rem}
+.footer img{height:52px;width:auto;border-radius:8px;margin-bottom:.6rem}
+.footer p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;margin-bottom:.4rem}
+.wa{position:fixed;bottom:1.5rem;right:1.5rem;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:90;text-decoration:none}
+.wa svg{width:28px;height:28px;fill:#fff}
+@media(max-width:800px){.nav-links{display:none}.product,.product.reverse{grid-template-columns:1fr;direction:ltr}}
+</style>
 </head>
 <body>
-  <!-- Loader with new lime-green ASTA logo -->
-  <div class="page-loader">
-    <div class="loader-logo" role="img" aria-label="ASTA — Kashmir Closer">
-      <img src="images/asta-logo.jpg" alt="ASTA — Kashmir Closer" class="loader-logo-img">
-    </div>
-  </div>
-
-  <!-- Sticky Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo" aria-label="ASTA Home"><img src="images/asta-logo.jpg" alt="ASTA — Kashmir Closer"></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#categories">Collections</a></li>
-        <li><a href="#bestsellers">Bestsellers</a></li>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-header">
-      <span class="logo"><img src="images/asta-logo.jpg" alt="ASTA"></span>
-      <button class="mobile-close" id="mobileClose">×</button>
-    </div>
-    <ul class="mobile-nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#categories">Collections</a></li>
-      <li><a href="#bestsellers">Bestsellers</a></li>
-      <li><a href="#story">Our Story</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">From Kashmir,<br>With Purity.</h1>
-      <p class="hero-subtitle">Authentic Himalayan honey, Kashmiri saffron, Kahwa & premium dry fruits — harvested from the valleys of Kashmir.</p>
-      <a href="https://wa.me/916006548199?text=Hello%20ASTA%2C%20I%20would%20like%20to%20explore%20your%20premium%20Kashmiri%20products." class="btn btn-primary" target="_blank" rel="noopener">Shop on WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- Categories -->
-  <section id="categories" class="categories">
-    <div class="container">
-      <h2 class="section-title">Our Collections</h2>
-      <div class="category-grid" id="categoryGrid"></div>
-    </div>
-  </section>
-
-  <!-- Bestsellers Coverflow -->
-  <section id="bestsellers" class="bestsellers">
-    <div class="container">
-      <h2 class="section-title">Bestsellers</h2>
-      <div class="swiper bestsellers-swiper">
-        <div class="swiper-wrapper" id="bestsellersWrapper"></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products -->
-  <section id="products" class="products">
-    <div class="container">
-      <h2 class="section-title">All Products</h2>
-      <div class="product-grid" id="productGrid"></div>
-    </div>
-  </section>
-
-  <!-- Story -->
-  <section id="story" class="story">
-    <div class="container">
-      <div class="story-content">
-        <h2 class="section-title">Our Story</h2>
-        <p>ASTA is rooted in the pristine valleys of Kashmir. We bring you pure, unadulterated honey from Himalayan wildflowers, the finest Mongra saffron, traditional Kahwa, and hand-selected dry fruits — all with the purity that only Kashmir can offer.</p>
-        <p>Every product is carefully sourced, tested for authenticity, and delivered with the same care that goes into its harvest.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="contact-text">Order exclusively via WhatsApp. We’re here to help you choose the purest from Kashmir.</p>
-      <a href="https://wa.me/916006548199?text=Hello%20ASTA%2C%20I%20would%20like%20to%20place%20an%20order." class="btn btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-brand">
-        <a href="index.html" class="logo" aria-label="ASTA Home"><img src="images/asta-logo.jpg" alt="ASTA — Kashmir Closer"></a>
-      </div>
-      <p class="footer-tagline">From Kashmir, With Purity.</p>
-      <div class="footer-social">
-        <a href="https://wa.me/916006548199" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
-        <a href="https://instagram.com/asta.kashmir" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-      </div>
-      <p class="footer-copy">© 2026 ASTA. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp & Instagram -->
-  <a href="https://wa.me/916006548199?text=Hello%20ASTA%2C%20I%20would%20like%20to%20explore%20your%20products." class="floating-btn whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.85 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-  <a href="https://instagram.com/asta.kashmir" class="floating-btn instagram-float" target="_blank" rel="noopener" aria-label="Instagram">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-  </a>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/app.js"></script>
+<div class="page-loader" id="loader"><div class="loader-logo"><img src="LOGO_PLACEHOLDER" alt="ASTA"></div></div>
+<nav class="nav">
+  <a href="/"><img src="LOGO_PLACEHOLDER" alt="ASTA"></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li><li><a href="#honey">Honey</a></li><li><a href="#saffron">Saffron</a></li><li><a href="#kahwa">Kahwa</a></li><li><a href="#dryfruits">Dry Fruits</a></li><li><a href="#story">Our Story</a></li><li><a href="#contact">Get in Touch</a></li>
+  </ul>
+</nav>
+<section id="home" class="hero">
+  <img src="LOGO_PLACEHOLDER" alt="ASTA">
+  <h1>From Kashmir, Closer to You.</h1>
+  <p>A little of Kashmir, brought closer from golden honey and Mongra saffron to Kahwa and carefully chosen dry fruits.</p>
+  <a href="https://wa.me/916006548199?text=Hello%20ASTA" class="btn" target="_blank">Shop on WhatsApp</a>
+</section>
+<section id="honey" class="section"><div class="product">
+  <div class="visual">Kashmiri Honey</div>
+  <div><h3>Kashmiri Honey</h3><p>Raw, golden honey gathered from the valleys of Kashmir. Unfiltered and pure.</p><div class="tags"><span>300g</span><span>500g</span><span>1kg</span></div><br><a href="https://wa.me/916006548199?text=Interested%20in%20Kashmiri%20Honey" target="_blank">Inquire on WhatsApp →</a></div>
+</div></section>
+<section id="saffron" class="section"><div class="product reverse">
+  <div class="visual">Kashmiri Saffron</div>
+  <div><h3>Kashmiri Saffron</h3><p>Finest Mongra grade saffron from Kashmir. Deep colour, rich aroma.</p><div class="variants"><span class="variant">1g</span><span class="variant">2g</span><span class="variant">5g</span><span class="variant">10g</span></div><div class="auth">Every pack includes guidance to recognise genuine Kashmiri saffron.</div><a href="https://wa.me/916006548199?text=Interested%20in%20Kashmiri%20Saffron" target="_blank">Inquire on WhatsApp →</a></div>
+</div></section>
+<section id="kahwa" class="section"><div class="product">
+  <div class="visual">Kahwa</div>
+  <div><h3>Kahwa</h3><p>Traditional Kashmiri Mist Saffron Kahwa — warm and fragrant.</p><div class="tags"><span>Classic Blend</span><span>Saffron Kahwa</span></div><br><a href="https://wa.me/916006548199?text=Interested%20in%20Kahwa" target="_blank">Inquire on WhatsApp →</a></div>
+</div></section>
+<section id="dryfruits" class="section"><div class="product reverse">
+  <div class="visual">Dry Fruits</div>
+  <div><h3>Dry Fruits</h3><p>Finest Kashmiri Walnut Kernels, almonds, cashews and more.</p><div class="tags"><span>Walnut Kernels</span><span>Almonds</span><span>Cashews</span><span>Mixed</span></div><br><a href="https://wa.me/916006548199?text=Interested%20in%20Dry%20Fruits" target="_blank">Inquire on WhatsApp →</a></div>
+</div></section>
+<section id="story" class="story">
+  <h2>Our Story</h2>
+  <p class="lead">Some things are better brought closer.</p>
+  <p>ASTA began with a simple idea to bring a little piece of Kashmir closer to you.</p>
+  <p>From the warmth of its homes to the things gathered from its land, we choose the flavours that feel familiar, honest and worth sharing.</p>
+  <p>Honey. Saffron. Kahwa. Dry fruits.</p>
+  <p>Different traditions, one place we call home.</p>
+  <p>We’re not here to make Kashmir louder.</p>
+  <p class="close">Just a little closer. From here, to you.</p>
+</section>
+<section id="contact" class="contact">
+  <h2>Get in Touch</h2>
+  <p style="color:var(--muted);margin-bottom:.4rem">Questions, recommendations, or simply want to say hello?</p>
+  <p style="color:var(--muted)">We’d love to hear from you.</p>
+  <a href="https://wa.me/916006548199?text=Hello%20ASTA" class="btn" target="_blank" style="margin-top:1.4rem">Chat on WhatsApp</a>
+</section>
+<footer class="footer">
+  <img src="LOGO_PLACEHOLDER" alt="ASTA">
+  <p>From Kashmir, Closer to You.</p>
+  <p style="font-size:.85rem;opacity:.65;font-style:normal;font-family:inherit">© 2026 ASTA · Bijbehara, Anantnag, Jammu & Kashmir</p>
+</footer>
+<a href="https://wa.me/916006548199" class="wa" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.85 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script>(function(){function h(){var e=document.getElementById('loader');if(e)e.classList.add('hidden')}window.addEventListener('load',function(){setTimeout(h,900)});setTimeout(h,2400)})();</script>
 </body>
 </html>
